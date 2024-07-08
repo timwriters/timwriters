@@ -227,6 +227,33 @@
                 gap: 1rem;
             }
         }
+
+
+    #services ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    #services li {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #services li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #services li::before {
+        content: attr(data-icon);
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
     </style>
 </head>
 <body>
@@ -240,7 +267,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </nav>                      
     <header>
         <h1>Academic Excellence Awaits</h1>
         <p class="tagline">Struggling with your assignment? We've got you covered!</p>
@@ -261,7 +288,7 @@
                 <p>Professional academic assistance</p>
             </div>
         </div>
-        <a href="#" class="cta-button">Get Help Now</a>
+        <a href="#contact" class="cta-button">Get Help Now</a>
     </header>
 
     <main>
@@ -273,16 +300,20 @@
         <section id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>📝 Essay Writing Assistance</li>
-                <li>📊 Research Paper Support</li>
-                <li>📚 Exam Preparation</li>
-                <li>🔬 Lab Report Help</li>
+                <li data-icon="📝">Essay Writing Assistance</li>
+        <li data-icon="📊">Research Paper Support</li>
+        <li data-icon="📚">Exam Preparation</li>
+        <li data-icon="🔬">Lab Report Help</li>
+        <li data-icon="🎓">Dissertations</li>
+        <li data-icon="📜">Thesis Writing</li>
+        <li data-icon="💻">Online Classes Support</li>
+        <li data-icon="✅">Online Examinations</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>📧 Email: timwriters149@gmail.com</p>
+            <p><a href="mailto:timwriters149@gmail.com">📧 Email: timwriters149@gmail.com</a></p>
             <p>📞 Phone: +254796541671</p>
         </section>
     </main>
